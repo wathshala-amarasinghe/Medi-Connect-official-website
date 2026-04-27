@@ -1,5 +1,5 @@
 import React from "react";
-import { TwitterIcon, LinkedinIcon, GithubIcon, MailIcon, PhoneIcon } from "lucide-react";
+import { TwitterIcon, LinkedinIcon, FacebookIcon, MailIcon, PhoneIcon } from "lucide-react";
 import { motion } from "framer-motion";
 
 const footerLinks = {
@@ -50,7 +50,6 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-10 lg:gap-12 mb-20">
           
-          {/* Brand Column */}
           <div className="col-span-2 md:col-span-3 lg:col-span-2">
             <div className="mb-8">
               <img
@@ -70,7 +69,7 @@ export function Footer() {
               {[
                 { icon: <TwitterIcon size={18} />, href: "#" },
                 { icon: <LinkedinIcon size={18} />, href: "https://www.linkedin.com/company/medi-connect1/" },
-                { icon: <GithubIcon size={18} />, href: "#" }
+                { icon: <FacebookIcon size={18} />, href: "#" }
               ].map((social, i) => (
                 <motion.a
                   key={i}
@@ -84,7 +83,6 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Link Columns */}
           {Object.entries(footerLinks).map(([category, links]) => (
             <div key={category} className="col-span-1">
               <h4 className="text-[11px] font-black text-white uppercase tracking-[0.2em] mb-7">
@@ -107,7 +105,6 @@ export function Footer() {
           ))}
         </div>
 
-        {/* Contact & Support Strip */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12 py-8 border-y border-slate-800/50">
            <div className="flex items-center gap-4 text-slate-400">
               <MailIcon size={18} style={{ color: brandRed }} />
@@ -123,7 +120,6 @@ export function Footer() {
            </div>
         </div>
 
-        {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 pt-4">
           <p className="text-slate-500 text-[12px] font-medium uppercase tracking-wider">
             © 2026 Medi Connect Private Limited. All rights reserved.
