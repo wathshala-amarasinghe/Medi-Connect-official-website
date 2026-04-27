@@ -30,6 +30,7 @@ export function HeroSection() {
           <motion.video
             key={currentVideo}
             src={videos[currentVideo]}
+            poster="/Image-1.jpg"
             autoPlay
             muted
             loop
